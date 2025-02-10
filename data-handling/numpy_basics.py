@@ -1,7 +1,7 @@
 import numpy as np
 
 # Create a NumPy array
-arr = np.array([1, 2, 3, 4, 5])
+arr = np.array([1, 2, 3, 4, 5, 6])
 print("Array:", arr)
 
 # Basic operations
@@ -19,3 +19,6 @@ print("Transposed Matrix:\n", matrix.T)
 # Element-wise operations
 squared = arr ** 2
 print("Squared Elements:", squared)
+
+module = arr % 2
+print("Moduled Outcome:", module)

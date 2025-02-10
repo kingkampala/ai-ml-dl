@@ -3,9 +3,9 @@ import numpy as np
 
 # Simulated messy data
 data = {
-    'Name': ['Alice', 'Bob', np.nan, 'David'],
-    'Age': [25, np.nan, 30, 40],
-    'Salary': [50000, 60000, np.nan, 80000]
+    'Name': ['Alice', 'Bob', 'Henry', np.nan, 'David'],
+    'Age': [25, np.nan, 30, 40, 35],
+    'Salary': [50000, 60000, np.nan, 80000, 90000]
 }
 
 df = pd.DataFrame(data)

@@ -13,6 +13,7 @@ print("DataFrame:\n", df)
 # Basic operations
 print("\nSummary Statistics:\n", df.describe())
 print("\nSelecting 'Name' column:\n", df['Name'])
+print("\nSelecting 'Age' column:\n", df['Age'])
 
 # Filtering data
 adults = df[df['Age'] > 28]
