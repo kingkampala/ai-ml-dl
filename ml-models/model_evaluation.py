@@ -9,6 +9,7 @@ import seaborn as sns
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import joblib
 
 # load cleaned dataset
 df = pd.read_csv('cleaned_dataset.csv')
@@ -17,6 +18,7 @@ df = pd.read_csv('cleaned_dataset.csv')
 X = df[['Experience', 'Age']]    # independent variable
 y = df['Salary']   # dependent variable
 
+'''
 salary_std = np.std(df['Salary'])
 salary_mean = np.mean(df['Salary'])
 
@@ -38,6 +40,7 @@ plt.savefig('two.png')
 
 print(df[['Age', 'Salary']].corr())
 print(df[['Experience', 'Salary']].corr())
+'''
 
 df.dropna(subset=['Age', 'Salary'], inplace=True)
 
@@ -61,3 +64,7 @@ print(f'model evaluation results:')
 print(f'mean squared error (mse): {mse:.2f}')
 print(f'mean absolute error (mae): {mae:.2f}')
 print(f'r² score: {r2:.2f}')
+
+# save trained model
+joblib.dump(model, 'salary_model.pkl')
+print('\n model saved as salary_model.pkl')
