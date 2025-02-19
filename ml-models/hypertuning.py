@@ -53,4 +53,4 @@ print(f'r² score: {r2:.2f}')
 
 # save the best_model
 joblib.dump(best_model, 'best_salary_model.pkl')
-print('\n best optimized model saved as best_salary_model.pkl')
+print('\n best optimized model saved as best_salary_model.pkl')    
