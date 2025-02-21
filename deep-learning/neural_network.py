@@ -18,7 +18,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # build neural network model
 model = keras.Sequential([
-    keras.layers.Dense(16, activation='relu', input_shape=(2,)),   # input layer (2 features)
+    keras.layers.Input(shape=(2,)),
+    keras.layers.Dense(16, activation='relu'),   # input layer
     keras.layers.Dense(8, activation='relu'),     # hidden layer
     keras.layers.Dense(1)     # output layer (1 neuron for salary prediction)
 ])
