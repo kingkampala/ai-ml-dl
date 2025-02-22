@@ -36,3 +36,6 @@ plt.imshow(X_test[0].reshape(28, 28), cmap='gray')
 plt.title(f'predicted: {np.argmax(predictions[0])}, actual: {y_test[0]}')
 plt.axis('off')
 plt.savefig('sample_20.png')
+
+model.save('deep-learning/mnist_cnn.h5')
+print('\n model saved as mnist_cnn.h5')
